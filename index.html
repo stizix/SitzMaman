@@ -546,6 +546,21 @@
             font-weight: 600;
             font-size: 1.02rem;
         }
+        .calendly-wrap {
+            margin-top: 56px;
+        }
+        .calendly-wrap__title {
+            text-align: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .calendly-inline-widget {
+            border-radius: var(--radius);
+            overflow: hidden;
+            min-width: 320px;
+        }
 
         /* ===== FOOTER ===== */
         .footer {
@@ -900,6 +915,15 @@
                 <div class="contact-card__value">Lonlay-l'Abbaye</div>
             </div>
         </div>
+        <!-- CALENDLY — remplace l'URL par ton lien Calendly une fois le compte créé -->
+        <div class="calendly-wrap">
+            <p class="calendly-wrap__title">Ou réservez directement un créneau</p>
+            <div
+                class="calendly-inline-widget"
+                data-url="https://calendly.com/clean-fresh-service-orne61/30min"
+                style="height:660px;">
+            </div>
+        </div>
     </div>
 </section>
 
@@ -933,5 +957,6 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
 </script>
 
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
